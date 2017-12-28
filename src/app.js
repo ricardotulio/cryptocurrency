@@ -1,3 +1,4 @@
 import path from 'path'
+import sum from './sum'
 
-console.log(path.resolve(__dirname))
+console.log(sum(2, 3))
