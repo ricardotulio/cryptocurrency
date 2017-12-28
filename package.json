@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "name": "learn-webpack",
+  "version": "0.1.0",
+  "description": "A simple project to learn webpack",
+  "main": "dist/app.bundle.js",
+  "author": "Ricardo Ledo de Tulio <ledo.tulio@gmail.com>",
+  "license": "MIT"
+}
