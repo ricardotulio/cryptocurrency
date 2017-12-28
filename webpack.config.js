@@ -1,5 +1,5 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -13,5 +13,17 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'src'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/i,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['env'] },
+        }],
+      },
+    ],
   },
 };
