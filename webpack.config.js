@@ -11,11 +11,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist', 'public'),
     publicPath: '/public',
   },
+  devtool: 'source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'src'),
   },
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.js$/i,
         exclude: [/node_modules/],
@@ -24,6 +25,10 @@ module.exports = {
           options: { presets: ['env'] },
         }],
       },
+			{
+				test: /\.scss$/i,
+				loaders: [ 'style-loader', 'css-loader', 'sass-loader' ],
+			},
     ],
   },
 };
