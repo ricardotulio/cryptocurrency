@@ -7,13 +7,13 @@ module.exports = {
     index: glob.sync('./src/**/*.js'),
   },
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist', 'public'),
+    filename: './js/[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/public',
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, 'src'),
+    contentBase: path.resolve(__dirname, 'public'),
   },
   module: {
     loaders: [
@@ -25,10 +25,14 @@ module.exports = {
           options: { presets: ['env'] },
         }],
       },
-			{
-				test: /\.scss$/i,
-				loaders: [ 'style-loader', 'css-loader', 'sass-loader' ],
-			},
+      {
+        test: /\.(sass|scss)$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
     ],
   },
-};
+}

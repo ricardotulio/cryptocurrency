@@ -1,8 +1,9 @@
 import React from 'react'
+import NavBar from './components/NavBar'
 import './App.scss'
 
 const App = () => (
-  <h1>App</h1>
+	<NavBar />
 )
 
 export default App
