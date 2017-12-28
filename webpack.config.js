@@ -4,12 +4,12 @@ const glob = require('glob')
 
 module.exports = {
   entry: {
-    app: glob.sync('./src/**/*.js'),
+    index: glob.sync('./src/**/*.js'),
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist', 'assets'),
-    publicPath: '/assets',
+    path: path.resolve(__dirname, 'dist', 'public'),
+    publicPath: '/public',
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'src'),
