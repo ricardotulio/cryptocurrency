@@ -10,5 +10,5 @@ module.exports = {
   appPublic: resolvePath('public'),
   appHtml: resolvePath('src/index.html'),
   appBuild: resolvePath('public'),
-  publicPath: '/',
+  publicPath: '/cryptocurrency/public/',
 }

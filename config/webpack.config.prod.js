@@ -14,7 +14,7 @@ module.exports = {
   output: {
     filename: 'js/[hash].bundle.js',
     path: paths.appBuild,
-    publicPath: '/cryptocurrency/public/',
+    publicPath: paths.publicPath,
   },
   module: {
     loaders: [
