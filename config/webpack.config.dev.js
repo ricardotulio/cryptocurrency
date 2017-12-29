@@ -3,8 +3,8 @@
 const path = require('path')
 const webpack = require('webpack')
 const glob = require('glob')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const InterpolateHtmlPlugin = require('interpolate-html-plugin')
 const paths = require('./paths')
 
 module.exports = {
@@ -28,18 +28,15 @@ module.exports = {
       },
       {
         test: /\.(sass|scss)$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader!sass-loader',
+        }),
       },
     ],
   },
   plugins: [
-    new InterpolateHtmlPlugin({
-      PUBLIC_PATH: 'https://google.com.br/',
-    }),
+    new ExtractTextPlugin('css/[hash].bundle.css'),
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,
