@@ -4,7 +4,6 @@ const path = require('path')
 const webpack = require('webpack')
 const glob = require('glob')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const InterpolateHtmlPlugin = require('interpolate-html-plugin')
 const paths = require('./paths')
 
 module.exports = {
