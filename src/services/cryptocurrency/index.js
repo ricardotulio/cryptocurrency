@@ -4,7 +4,7 @@ import {
   concat,
   prop,
 } from 'ramda'
-import apiConfig from '../../config/api.js'
+import apiConfig from '../../../config/api.js'
 
 const list = () => Promise.resolve('/v1/ticker/')
   .then(concat(apiConfig.baseUrl))

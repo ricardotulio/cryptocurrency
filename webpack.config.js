@@ -8,12 +8,8 @@ module.exports = {
   },
   output: {
     filename: './js/[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/public',
-  },
-  devtool: 'source-map',
-  devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'static'),
+    publicPath: '/static',
   },
   module: {
     loaders: [
@@ -35,4 +31,15 @@ module.exports = {
       },
     ],
   },
+  devtool: 'source-map',
+  devServer: {
+    contentBase: path.resolve(__dirname, 'public'),
+    compress: true,
+    hot: true,
+    https: false,
+    noInfo: true,
+    host: "0.0.0.0",
+    port: 8080,
+  },
+  context: __dirname,
 }

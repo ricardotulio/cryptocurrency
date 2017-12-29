@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import {
+  gt,
   ifElse,
   length,
-  gt,
-  pipe,
   map,
+  pipe,
 } from 'ramda'
 import cryptoCurrency from '../../services/cryptocurrency'
 import CryptoCurrencyItem from '../CryptoCurrencyItem'
