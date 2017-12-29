@@ -1,0 +1,30 @@
+@import '../../styles/colors.scss';
+
+.cryptocurrency-item {
+  width: calc(100% - 20px);
+  height: auto;
+
+  padding: 10px;
+
+  list-style: none;
+
+  border-bottom: 1px solid $third-color;
+}
+
+.cryptocurrency-description {
+  width: 100%;
+  height: auto;
+}
+  
+.cryptocurrency-symbol {
+  font-weight: bolder;
+}
+
+.cryptocurrency-cotation {
+  width: 100%;
+  height: auto;
+}
+
+.cryptocurrency-change-7d {
+  float: right;
+}

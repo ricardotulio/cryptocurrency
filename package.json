@@ -1,4 +1,12 @@
 {
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "ramda": "^0.25.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "superagent": "^3.8.2"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -21,10 +29,5 @@
   "description": "A simple project to learn webpack",
   "main": "dist/app.bundle.js",
   "author": "Ricardo Ledo de Tulio <ledo.tulio@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "extract-text-webpack-plugin": "^3.0.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  }
+  "license": "MIT"
 }
